@@ -14,6 +14,22 @@ function MostrarMenu(menu)
     }
 }
 
+function MostrarChat(chat) 
+{
+
+    var display = document.getElementById(chat).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(chat).style.display = 'block';
+    }
+
+    else
+    {
+        document.getElementById(chat).style.display = 'none';
+    }
+}
+
 function Login()
 {
 
