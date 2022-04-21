@@ -65,6 +65,7 @@ function Login()
         }
     }
 }
+
 function ExibirIframe(Chat) 
 {
 
@@ -94,6 +95,7 @@ function ExibirIframeNota(Nota)
         document.getElementById(Nota).style.display = 'none';
     }
 }
+
 function ExibirIframeAula(Aula) 
 {
 
