@@ -63,3 +63,17 @@ function Login()
         }
     }
 }
+function ExibirIframe(Iframe) 
+{
+
+    var display = document.getElementById(Iframe).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Iframe).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Iframe).style.display = 'none';
+    }
+}
