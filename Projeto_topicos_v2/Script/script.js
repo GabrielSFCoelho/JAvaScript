@@ -60,6 +60,8 @@ function Login()
             window.location.href = "Responsavel.html";
         }else if(document.login_form.txtUsuario.value=='secretaria'){
             window.location.href = "Secretaria.html";
+        }else if(document.login_form.txtUsuario.value=='finanças'){
+            window.location.href = "finanças.html";
         }
     }
 }
@@ -149,5 +151,20 @@ function ExibirIframeMaterias(Materias)
     else
     {
         document.getElementById(Materias).style.display = 'none';
+    }
+}
+
+function ExibirIframeRelatorio(Relatorio) 
+{
+
+    var display = document.getElementById(Relatorio).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Relatorio).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Relatorio).style.display = 'none';
     }
 }
