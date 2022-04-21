@@ -63,17 +63,91 @@ function Login()
         }
     }
 }
-function ExibirIframe(Iframe) 
+function ExibirIframe(Chat) 
 {
 
-    var display = document.getElementById(Iframe).style.display;
+    var display = document.getElementById(Chat).style.display;
 
     if (display == "none") 
     {
-        document.getElementById(Iframe).style.display = 'block';
+        document.getElementById(Chat).style.display = 'block';
     }
     else
     {
-        document.getElementById(Iframe).style.display = 'none';
+        document.getElementById(Chat).style.display = 'none';
+    }
+}
+
+function ExibirIframeNota(Nota) 
+{
+
+    var display = document.getElementById(Nota).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Nota).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Nota).style.display = 'none';
+    }
+}
+function ExibirIframeAula(Aula) 
+{
+
+    var display = document.getElementById(Aula).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Aula).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Aula).style.display = 'none';
+    }
+}
+
+function ExibirIframeGrade(Grade) 
+{
+
+    var display = document.getElementById(Grade).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Grade).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Grade).style.display = 'none';
+    }
+}
+
+function ExibirIframeFinanceiro(Financeiro) 
+{
+
+    var display = document.getElementById(Financeiro).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Financeiro).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Financeiro).style.display = 'none';
+    }
+}
+
+function ExibirIframeMaterias(Materias) 
+{
+
+    var display = document.getElementById(Materias).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Materias).style.display = 'block';
+    }
+    else
+    {
+        document.getElementById(Materias).style.display = 'none';
     }
 }
