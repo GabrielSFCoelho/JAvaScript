@@ -1,0 +1,72 @@
+h2,h1,h5{
+    color: #fff;
+}
+.h5select{
+    margin-bottom: 0;
+   
+}
+.button {
+    background-color: #22577E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+/* ----------------------------------------Relatio--------------------------------------- */
+.hRelatorio{
+    text-align: center;
+    background-color: #22577E;
+    padding: 8px;
+    color: white;
+}
+.bRelatorio{
+ text-align: center;
+}
+.bRelatorio section select{
+    width: 500px;
+}
+.bRelatorio section article textarea{
+    width: 1000px;
+    height: 700px;
+}
+
+/* ----------------------------------------Nota_adm-------------------------------------- */
+.SN td,th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    background-color: #dddddd;
+}
+.SN table{
+    width: 100%;
+}
+
+.superdiv{
+    text-align: center;
+}
+section{
+    text-align: center;
+}
+.HN{
+    text-align: center;
+}
+/* ----------------------------------------grade_adm-------------------------------------- */
+.SG td,th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    background-color: #dddddd;
+}
+.SG table{
+    width: 100%;
+}
+.SG select{
+    width: 300px;
+}
+.HG{
+text-align: center;
+}
