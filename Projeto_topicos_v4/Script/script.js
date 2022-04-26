@@ -295,3 +295,33 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+function MostrarCalendario(Calendario) 
+{
+
+    var display = document.getElementById(Calendario).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(Calendario).style.display = 'block';
+    }
+
+    else
+    {
+        document.getElementById(Calendario).style.display = 'none';
+    }
+} 
+function MostrarPBimestral(PBimestral) 
+{
+
+    var display = document.getElementById(PBimestral).style.display;
+
+    if (display == "none") 
+    {
+        document.getElementById(PBimestral).style.display = 'block';
+    }
+
+    else
+    {
+        document.getElementById(PBimestral).style.display = 'none';
+    }
+}
