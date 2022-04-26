@@ -89,7 +89,7 @@ text-align: center;
   }
   
   .accordion:after {
-    content: '\002B';
+    content: '\002B'; /*(+)*/
     color: #777;
     font-weight: bold;
     float: right;
@@ -97,7 +97,7 @@ text-align: center;
   }
   
   .active:after {
-    content: "\2212";
+    content: "\2212"; /*(-)*/
   }
   
   .panel {
@@ -149,4 +149,11 @@ text-align: center;
 /* ----------------------------------------Financeiro-------------------------------------- */
 .SF h3{
     color: #fff;
+}
+
+.banner-materias{
+    width: 1000px;
+}
+.Dbanner{
+    text-align: center;
 }
