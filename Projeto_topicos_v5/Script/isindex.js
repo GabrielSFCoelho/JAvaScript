@@ -1,0 +1,1 @@
+alert("Bem vindo(a) a instituição Cruzeiro do Norte! Matrículas abertas para o segundo semestre de 2022!");
