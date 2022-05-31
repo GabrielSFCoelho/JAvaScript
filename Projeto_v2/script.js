@@ -21,7 +21,7 @@ function Login()
         
         if(document.login_form.txtUsuario.value=='professor')
         {
-            window.location.href = "/professor/professor.html";
+            window.location.href = "professor/professor.html";
         }else if(document.login_form.txtUsuario.value=='aluno'){
             window.location.href = "aluno/aluno.html";
         }else if(document.login_form.txtUsuario.value=='responsavel'){
