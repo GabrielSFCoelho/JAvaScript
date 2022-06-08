@@ -1,4 +1,4 @@
-
+// tabela notas e faltas com adiçao de dados, exclusao e ediçao
 class Aluno {
     constructor() {
         this.id = 1;
@@ -154,3 +154,4 @@ class Aluno {
     }
 }
 var aluno = new Aluno();
+// fim da tabela notas e faltas
