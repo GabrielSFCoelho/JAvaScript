@@ -43,6 +43,8 @@ class Aluno {
             let imgDelet = document.createElement('img');
             imgDelet.src = '../img/delete.png';
 
+            imgDelet.setAttribute("onclick", "aluno.deletar(" + this.arrayAluno[i].id + ")");
+
             td_acao.appendChild(imgEdit);
             td_acao.appendChild(imgDelet);
         }
@@ -97,6 +99,22 @@ class Aluno {
         document.getElementById('a2').value = '';
         aluno.media = document.getElementById('media').value = '';
 
+    }
+    deletar(id) {
+        var x;
+        var r = confirm("Você deseja deletar um aluno?");
+        if (r == true) {
+            alert('Você ta deletando uma aluno')
+            let tbody = document.getElementById('tbody');
+            for (let i = 0; i < this.arrayAluno.length; i++) {
+                if (this.arrayAluno[i].id == id) {
+                    this.arrayAluno.splice(i, 1);
+                    tbody.deleteRow(i);
+                }
+            }
+        } else {
+            x = "Você cancelou";
+        }
     }
 }
 var aluno = new Aluno();
