@@ -140,7 +140,7 @@ class Aluno {
         var x;
         var r = confirm("Você deseja deletar um aluno?");
         if (r == true) {
-            alert('Você ta deletando uma aluno')
+            alert('Você ta deletando um aluno')
             let tbody = document.getElementById('tbody');
             for (let i = 0; i < this.arrayAluno.length; i++) {
                 if (this.arrayAluno[i].id == id) {
