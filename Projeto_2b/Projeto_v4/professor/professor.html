@@ -95,25 +95,25 @@
                                             </div>
                                             <div>
                                                 <label>Faltas</label>
-                                                <input type="number" id="nome" placeholder="3">
+                                                <input type="number" id="faltas" placeholder="3">
                                             </div>
                                             <div>
                                                 <label>A1</label>
-                                                <input type="number" id="nome" placeholder="10">
+                                                <input type="number" id="a1" placeholder="10">
                                             </div>
                                             <div>
                                                 <label>A2</label>
-                                                <input type="number" id="nome" placeholder="10">
+                                                <input type="number" id="a2" placeholder="10">
                                             </div>
                                             <div>
                                                 <label>Media</label>
-                                                <input type="number" id="nome" placeholder="10">
+                                                <input type="number" id="media" placeholder="10">
                                             </div>
                                             <div class="d-flex">
-                                                <button onclick="aluno.adicionar()" type="button"
-                                                    class="btn btn-danger m-2">Adicionar</button>
-                                                <button onclick="aluno.excluir()" type="button"
-                                                    class="btn btn-danger m-2">Excluir</button>
+                                                <button onclick="aluno.salvar()" type="button"
+                                                    class="btn btn-danger m-2">Salvar</button>
+                                                <button onclick="aluno.cancelar()" type="button"
+                                                    class="btn btn-danger m-2">Cancelar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -136,19 +136,19 @@
                                     </tr>
                                 </thead>
                                 <!-- linhas da tabela -->
-                                <tbody>
+                                <tbody id="tbody">
                                     <tr>
                                         <th scope="row">1</th>
                                         <!-- Aluno -->
-                                        <td></td>
+                                        <td>a</td>
                                         <!-- Faltas -->
-                                        <td></td>
+                                        <td>2</td>
                                         <!-- A1 -->
-                                        <td></td>
+                                        <td>3</td>
                                         <!-- A2 -->
-                                        <td></td>
+                                        <td>3</td>
                                         <!-- Media -->
-                                        <td></td>
+                                        <td>4</td>
                                         <!-- Editar -->
                                         <td class="row"><img src="../img/edit.png"> <img src="../img/delete.png"></td>
                                     </tr>
