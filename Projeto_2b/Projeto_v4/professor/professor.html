@@ -67,60 +67,109 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <!-- conteudo "notas/faltas" aqui -->
+
                             <div class="row">
-                                <div class="dropdown m-2 col-sm-10">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Turmas
+                                <!-- Seleciona uma turmas -->
+                                <div class="dropdown m-2 col-sm-9">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Turmas
                                     </button>
                                     <div class="dropdown-menu " aria-labelledby="dropdownMenu2">
                                         <button class="dropdown-item" type="button">Turma A</button>
                                         <button class="dropdown-item" type="button">Turma B</button>
                                     </div>
                                 </div>
-                                <div class="col-sm-1">
-                                    <button type="button" class="btn btn-danger m-2" >Editar</button>
+                                <!--  Ve as opçoes -->
+                                <div class="col-sm-1 mr-1">
+                                    <div class="btn-group dropleft">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Opções
+                                        </button>
+                                        <!-- formulario e botao de excluir e adicionar -->
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <label>Aluno</label>
+                                                <input type="text" id="nome" placeholder="Joaozinho">
+                                            </div>
+                                            <div>
+                                                <label>Faltas</label>
+                                                <input type="number" id="nome" placeholder="3">
+                                            </div>
+                                            <div>
+                                                <label>A1</label>
+                                                <input type="number" id="nome" placeholder="10">
+                                            </div>
+                                            <div>
+                                                <label>A2</label>
+                                                <input type="number" id="nome" placeholder="10">
+                                            </div>
+                                            <div>
+                                                <label>Media</label>
+                                                <input type="number" id="nome" placeholder="10">
+                                            </div>
+                                            <div class="d-flex">
+                                                <button onclick="aluno.adicionar()" type="button"
+                                                    class="btn btn-danger m-2">Adicionar</button>
+                                                <button onclick="aluno.excluir()" type="button"
+                                                    class="btn btn-danger m-2">Excluir</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
+                                <!-- termina opçoes Î -->
                             </div>
+                            <!-- tabela com alunos -->
                             <table class="table table-hover table-ativo">
+                                <!-- cabeçalho -->
                                 <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Aluno</th>
-                                    <th scope="col">Faltas</th>
-                                    <th scope="col">A1</th>
-                                    <th scope="col">A2</th>
-                                    <th scope="col">Media</th>
-                                  </tr>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Aluno</th>
+                                        <th scope="col">Faltas</th>
+                                        <th scope="col">A1</th>
+                                        <th scope="col">A2</th>
+                                        <th scope="col">Media</th>
+                                        <th scope="col">Editar</th>
+                                    </tr>
                                 </thead>
+                                <!-- linhas da tabela -->
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <!-- Aluno -->
-                                    <td></td>
-                                    <!-- Faltas -->
-                                    <td></td>
-                                    <!-- A1 -->
-                                    <td></td>
-                                    <!-- A2 -->
-                                    <td></td>
-                                    <!-- Media -->
-                                    <td></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <!-- Aluno -->
-                                    <td></td>
-                                    <!-- Faltas -->
-                                    <td></td>
-                                    <!-- A1 -->
-                                    <td></td>
-                                    <!-- A2 -->
-                                    <td></td>
-                                    <!-- Media -->
-                                    <td></td>
-                                  </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <!-- Aluno -->
+                                        <td></td>
+                                        <!-- Faltas -->
+                                        <td></td>
+                                        <!-- A1 -->
+                                        <td></td>
+                                        <!-- A2 -->
+                                        <td></td>
+                                        <!-- Media -->
+                                        <td></td>
+                                        <!-- Editar -->
+                                        <td class="row"><img src="../img/edit.png"> <img src="../img/delete.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <!-- Aluno -->
+                                        <td></td>
+                                        <!-- Faltas -->
+                                        <td></td>
+                                        <!-- A1 -->
+                                        <td></td>
+                                        <!-- A2 -->
+                                        <td></td>
+                                        <!-- Media -->
+                                        <td></td>
+                                        <!-- Editar -->
+                                        <td class="row"><img src="../img/edit.png"> <img src="../img/delete.png"></td>
+                                    </tr>
                                 </tbody>
-                              </table>
+                                <!-- termina linhas da tabela -->
+                            </table>
 
                             <!-- termina conteudo notas e faltas -->
                         </div>
@@ -148,7 +197,7 @@
 
 
 
-              
+
                             <!-- termina conteudo material de estudo -->
                         </div>
                     </div>
@@ -176,7 +225,7 @@
 
 
 
-              
+
                             <!-- termina conteudo grade horaria dos alunos -->
                         </div>
                     </div>
@@ -192,7 +241,7 @@
                     </div>
                     <div id="collapseFor" class="collapse" aria-labelledby="headingFor" data-parent="#accordionExample">
                         <div class="card-body">
-                           <!-- conteudo "relatorios" aqui -->
+                            <!-- conteudo "relatorios" aqui -->
 
 
 
@@ -203,7 +252,7 @@
 
 
 
-              
+
                             <!-- termina conteudo  relatorio-->
                         </div>
                     </div>
@@ -231,7 +280,7 @@
 
 
 
-              
+
                             <!-- termina conteudo  calendario-->
                         </div>
                     </div>
@@ -254,6 +303,7 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="professor.js"></script>
 
 </body>
 
