@@ -155,3 +155,4 @@ class Aluno {
 }
 var aluno = new Aluno();
 // fim da tabela notas e faltas
+
