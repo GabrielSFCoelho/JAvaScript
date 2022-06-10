@@ -19,7 +19,6 @@ function Login() {
         // professor
         if (document.login_form.txtUsuario.value == 'Violet') {
             window.location.href = "professor/professor.html";
-            export var nome1 = "Violet";
 
         } else if (document.login_form.txtUsuario.value == 'Emanuel') {
             window.location.href = "professor/professor.html";
