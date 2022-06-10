@@ -1,3 +1,7 @@
+import ../script;
+
+console.log(script)
+
 // tabela notas e faltas com adiçao de dados, exclusao e ediçao
 class Aluno {
     constructor() {
@@ -10,12 +14,12 @@ class Aluno {
         let aluno = this.lerDados();
 
         if (this.validarCampo(aluno)) {
-            if(this.editId == null){
+            if (this.editId == null) {
                 this.adicionar(aluno);
-            }else{
+            } else {
                 this.atualizar(this.editId, aluno);
             }
-            
+
         }
 
         this.listaTabela();
@@ -46,7 +50,7 @@ class Aluno {
             let imgEdit = document.createElement('img');
             imgEdit.src = '../img/edit.png';
 
-            imgEdit.setAttribute("onclick", "aluno.editar(" + JSON.stringify(this.arrayAluno[i])  + ")");
+            imgEdit.setAttribute("onclick", "aluno.editar(" + JSON.stringify(this.arrayAluno[i]) + ")");
 
             let imgDelet = document.createElement('img');
             imgDelet.src = '../img/delete.png';
@@ -66,7 +70,7 @@ class Aluno {
         this.id++;
     }
 
-    atualizar(id, aluno){
+    atualizar(id, aluno) {
         for (let i = 0; i < this.arrayAluno.length; i++) {
             if (this.arrayAluno[i].id == id) {
                 this.arrayAluno[i].nomeAluno = aluno.nomeAluno;
@@ -78,14 +82,14 @@ class Aluno {
         }
     }
 
-    editar(dados){
+    editar(dados) {
         this.editId = dados.id;
         document.getElementById('nome').value = dados.nomeAluno;
         document.getElementById('faltas').value = dados.faltas;
         document.getElementById('a1').value = dados.a1;
         document.getElementById('a2').value = dados.a2;
         document.getElementById('media').value = dados.media;
-        
+
         document.getElementById('btn1').innerText = 'Atualizar';
     }
 
@@ -156,3 +160,11 @@ class Aluno {
 var aluno = new Aluno();
 // fim da tabela notas e faltas
 
+// teste JSON
+
+let professoresTexto = '{"professores": [' +
+    '{"nome": "Emanuel","sobrenome":"Santos","diciplinas": ["Portugues","Matemática"]},' +
+    '{"nome": "Violet","sobrenome": "Evergarden","diciplinas": ["História","Geografia"]}' +
+    ']}'
+let professor = JSON.parse(professoresTexto);
+document.getElementById('aqui').innerHTML = "Ola, " + professor.professores[0].nome + " " + professor.professores[0].sobrenome + ", seja bem vindo!"
