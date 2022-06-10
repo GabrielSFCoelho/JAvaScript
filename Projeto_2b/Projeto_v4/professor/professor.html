@@ -143,30 +143,28 @@
                             <div class="row">
                                 <!-- Seleciona uma Materia -->
                                 <div class="form-group col-sm-2">
-                                    <label for="exampleFormControlSelect1">Materias</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option></option>
-                                        <option></option>
+                                    <label for="selectMaterias">Materias</label>
+                                    <select class="form-control" class="select-listagem" id="selectMaterias">
+                                        <option value="">Selecione...</option>
                                     </select>
                                 </div>
                                 <!-- Seleciona uma turmas -->
                                 <div class="form-group col-sm-2">
-                                    <label for="exampleFormControlSelect1">Turmas</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Turma A</option>
-                                        <option>Turma B</option>
+                                    <label for="turmas">Turmas</label>
+                                    <select class="form-control" class="select-listagem" id="turmas">
+										<option value="">Selecione...</option>
                                     </select>
                                 </div>
                                 <!-- span so para arrumar espaçamento  -->
                                 <span class="col-sm-6"></span>
                                 <!--  Ve as opçoes -->
-                                <div class="col-sm-1 mr-1">
+                                <!-- <div class="col-sm-1 mr-1">
                                     <div class="btn-group dropleft">
                                         <button type="button" class="btn btn-primary dropdown-toggle"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Opções
                                         </button>
-                                        <!-- formulario e botao de excluir e adicionar -->
+                                    	 formulario e botao de excluir e adicionar
                                         <div class="dropdown-menu">
                                             <div>
                                                 <label>Aluno</label>
@@ -197,7 +195,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
                                 <!-- termina opçoes Î -->
                             </div>
                             <!-- tabela com alunos -->
@@ -205,13 +203,11 @@
                                 <!-- cabeçalho -->
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
                                         <th scope="col">Aluno</th>
                                         <th scope="col">Faltas</th>
                                         <th scope="col">A1</th>
                                         <th scope="col">A2</th>
                                         <th scope="col">Media</th>
-                                        <th scope="col">Editar</th>
                                     </tr>
                                 </thead>
                                 <!-- linhas da tabela -->
@@ -221,7 +217,6 @@
                                     <!-- A1 -->
                                     <!-- A2 -->
                                     <!-- Media -->
-                                    <!-- Editar -->
                                 </tbody>
                                 <!-- termina linhas da tabela -->
                             </table>
@@ -358,6 +353,7 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
+	<script src="../requestJSON.js"></script>
     <script src="professor.js"></script>
 
 </body>
