@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style_img.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <title>Professor</title>
 </head>
 
@@ -152,51 +153,10 @@
                                 <div class="form-group col-sm-2">
                                     <label for="turmas">Turmas</label>
                                     <select class="form-control" class="select-listagem" id="turmas">
-										<option value="">Selecione...</option>
+                                        <option value="">Selecione...</option>
                                     </select>
                                 </div>
-                                <!-- span so para arrumar espaçamento  -->
-                                <span class="col-sm-6"></span>
-                                <!--  Ve as opçoes -->
-                                <!-- <div class="col-sm-1 mr-1">
-                                    <div class="btn-group dropleft">
-                                        <button type="button" class="btn btn-primary dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Opções
-                                        </button>
-                                    	 formulario e botao de excluir e adicionar
-                                        <div class="dropdown-menu">
-                                            <div>
-                                                <label>Aluno</label>
-                                                <input type="text" id="nome" placeholder="Joaozinho">
-                                            </div>
-                                            <div>
-                                                <label>Faltas</label>
-                                                <input type="number" id="faltas" placeholder="3">
-                                            </div>
-                                            <div>
-                                                <label>A1</label>
-                                                <input type="number" id="a1" placeholder="10">
-                                            </div>
-                                            <div>
-                                                <label>A2</label>
-                                                <input type="number" id="a2" placeholder="10">
-                                            </div>
-                                            <div>
-                                                <label>Media</label>
-                                                <input type="number" id="media" placeholder="10">
-                                            </div>
-                                            <div class="d-flex">
-                                                <button onclick="aluno.salvar()" type="button"
-                                                    class="btn btn-danger m-2" id="btn1">Salvar</button>
-                                                <button onclick="aluno.cancelar()" type="button"
-                                                    class="btn btn-danger m-2">Cancelar</button>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                </div> -->
-                                <!-- termina opçoes Î -->
                             </div>
                             <!-- tabela com alunos -->
                             <table class="table table-hover table-ativo">
@@ -237,17 +197,58 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <!-- conteudo "material de estudo" aqui -->
+                            <div class="row">
+                                <!-- Seleciona uma Materia -->
+                                <div class="form-group col-sm-2">
+                                    <label for="selectMaterias">Materias</label>
+                                    <select class="form-control" class="select-listagem" id="selectMaterias">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
+                                <!-- Seleciona uma turmas -->
+                                <div class="form-group col-sm-2">
+                                    <label for="turmas">Turmas</label>
+                                    <select class="form-control" class="select-listagem" id="turmas">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
+                                <span class="col-sm-3"></span>
+                                <div class="col-sm-4 mt-1">
+                                    Titulo da aula
+                                    <div class="input-group mb-3">
 
+                                        <input type="text" class="form-control"
+                                            placeholder="Escreva aqui o titulo da aula"
+                                            aria-label="Escreva aqui o titulo da aula" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button"
+                                                id="button-addon2">Botão</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo</label>
+                                </div>
+                            </div>
 
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Escreva o comentario da aula aqui"
+                                    aria-label="Escreva o comentario da aula aqui" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Botão</button>
+                                </div>
+                            </div>
 
-
-
-
-
-
-
+                            <button type="button" class="btn btn-outline-secondary">Upar Aula</button>
                             <!-- termina conteudo material de estudo -->
                         </div>
                     </div>
@@ -266,15 +267,40 @@
                         <div class="card-body">
                             <!-- conteudo "grade horaria dos alunos" aqui -->
 
+                            <div class="row">
+                                <!-- Seleciona uma Materia -->
+                                <div class="form-group col-sm-2">
+                                    <label for="selectMaterias">Materias</label>
+                                    <select class="form-control" class="select-listagem" id="selectMaterias">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
+                                <!-- Seleciona uma turmas -->
+                                <div class="form-group col-sm-2">
+                                    <label for="turmas">Turmas</label>
+                                    <select class="form-control" class="select-listagem" id="turmas">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
 
+                            </div>
+                            <!-- tabela com alunos -->
+                            <table class="table table-hover table-ativo">
+                                <!-- cabeçalho -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Aluno</th>
+                                        <th scope="col">Materia</th>
+                                        <th scope="col">Carga Horaria</th>
+                                        <th scope="col">Aprovar</th>
+                                    </tr>
+                                </thead>
+                                <!-- linhas da tabela -->
+                                <tbody id="tbody">
 
-
-
-
-
-
-
-
+                                </tbody>
+                                <!-- termina linhas da tabela -->
+                            </table>
 
                             <!-- termina conteudo grade horaria dos alunos -->
                         </div>
@@ -292,16 +318,88 @@
                     <div id="collapseFor" class="collapse" aria-labelledby="headingFor" data-parent="#accordionExample">
                         <div class="card-body">
                             <!-- conteudo "relatorios" aqui -->
+                            <div class="row">
+                                <!-- Seleciona uma Materia -->
+                                <div class="form-group col-sm-2">
+                                    <label for="selectMaterias">Materias</label>
+                                    <select class="form-control" class="select-listagem" id="selectMaterias">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
+                                <!-- Seleciona uma turmas -->
+                                <div class="form-group col-sm-2">
+                                    <label for="turmas">Turmas</label>
+                                    <select class="form-control" class="select-listagem" id="turmas">
+                                        <option value="">Selecione...</option>
+                                    </select>
+                                </div>
 
-
-
-
-
-
-
-
-
-
+                            </div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">Aluno 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#perfil" role="tab"
+                                        aria-controls="profile" aria-selected="false">Aluno 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contato" role="tab"
+                                        aria-controls="contact" aria-selected="false">Aluno 3</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <!-- aluno 1 -->
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    <!-- input + aonde aparece o texto -->
+                                    <p id="valorDigitado"></p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id=valor class="form-control"
+                                            placeholder="Recipient's username" aria-label="Recipient's username"
+                                            aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                                onclick="capturar()" value="escreva algo">Botão</button>
+                                        </div>
+                                    </div>
+                                    <!-- termina input -->
+                                </div>
+                                <!-- fim aluno 1 -->
+                                <!-- aluno 2 -->
+                                <div class="tab-pane fade" id="perfil" role="tabpanel" aria-labelledby="profile-tab">
+                                    <!-- input + aonde aparece o texto -->
+                                    <p id="valorDigitado1"></p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id=valor1 class="form-control"
+                                            placeholder="Recipient's username" aria-label="Recipient's username"
+                                            aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                                onclick="capturarum()" value="escreva algo">Botão</button>
+                                        </div>
+                                    </div>
+                                    <!-- termina input -->
+                                </div>
+                                <!-- fim aluno 2 -->
+                                <!-- aluno 3 -->
+                                <div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contact-tab">
+                                    <!-- input + aonde aparece o texto -->
+                                    <p id="valorDigitado2"></p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id=valor2 class="form-control"
+                                            placeholder="Recipient's username" aria-label="Recipient's username"
+                                            aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                                onclick="capturardois()" value="escreva algo">Botão</button>
+                                        </div>
+                                    </div>
+                                    <!-- termina input -->
+                                </div>
+                                <!-- fim aluno 3 -->
+                            </div>
 
                             <!-- termina conteudo  relatorio-->
                         </div>
@@ -321,15 +419,28 @@
                         <div class="card-body">
                             <!-- conteudo "calendario" aqui -->
 
-
-
-
-
-
-
-
-
-
+                            <div class="caixaContainer">
+                                <div class="calendar">
+                                    <div class="month">
+                                        <i class="fas fa-angle-left prev"></i>
+                                        <div class="date">
+                                            <h1></h1>
+                                            <p></p>
+                                        </div>
+                                        <i class="fas fa-angle-right next"></i>
+                                    </div>
+                                    <div class="weekdays">
+                                        <div>Sun</div>
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thu</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                    </div>
+                                    <div class="days"></div>
+                                </div>
+                            </div>
 
                             <!-- termina conteudo  calendario-->
                         </div>
@@ -353,7 +464,7 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
-	<script src="../requestJSON.js"></script>
+    <script src="../requestJSON.js"></script>
     <script src="professor.js"></script>
 
 </body>

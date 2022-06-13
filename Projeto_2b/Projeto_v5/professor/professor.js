@@ -1,7 +1,7 @@
 const dadosArmazenados = localStorage;
 
 class Professor {
-    constructor() {
+	constructor() {
 		this.renderizarDisciplinas();
 		this.renderizarTurmas();
 		this.registrarEventos();
@@ -10,12 +10,12 @@ class Professor {
 	getUsuarioLogado() {
 		var params = (new URL(document.location)).searchParams;
 		return params.get('usuarioLogado');
-		
+
 	}
 
 	renderizarDisciplinas() {
 		var disciplinas = this.getDisciplinasDoProfessorLogado();
-		$.map(disciplinas , function(disciplina) {
+		$.map(disciplinas, function (disciplina) {
 			$('#selectMaterias').append(`<option value="${disciplina}">${disciplina}</option>`);
 		});
 	}
@@ -29,7 +29,7 @@ class Professor {
 
 	renderizarTurmas() {
 		var turmas = JSON.parse(localStorage.getItem('turma'))['Turmas'];
-		$.map(Object.keys(turmas), function(turma) {
+		$.map(Object.keys(turmas), function (turma) {
 			$('#turmas').append(`<option value="${turma}">${turma}</option>`);
 		});
 	}
@@ -52,7 +52,7 @@ class Professor {
 		var that = this;
 		$('#tbody').html('');
 		$('#tbody').append(
-			$.map(alunos, function(aluno) {
+			$.map(alunos, function (aluno) {
 				return $('<tr>').append(
 					$('<td>').text(aluno.nome + ' ' + aluno.sobrenome),
 					$('<td>').text(that.obterFaltasDoAluno(aluno)),
@@ -89,7 +89,7 @@ class Professor {
 
 	registrarEventos() {
 		var that = this;
-		$('select').on('change', function() {
+		$('select').on('change', function () {
 			var disciplina = $('#selectMaterias').val();
 			var turma = $('#turmas').val();
 			var alunos = that.obterAlunosPorDisciplinaETurma(disciplina, turma);
@@ -102,3 +102,111 @@ var professor = new Professor();
 professor.renderizarListaDeAlunos(
 	professor.obterAlunosPorDisciplinaETurma(null, null)
 );
+
+
+document.getElementById('aqui').innerHTML = "Ola, " + 'usuarioLogado' + ", seja bem vindo!"
+
+
+
+
+
+// ------------------relatorio--------------------------
+var capturando = "";
+function capturar() {
+	capturando = document.getElementById('valor').value;
+	document.getElementById('valorDigitado').innerHTML = capturando;
+}
+var capturando = "";
+function capturarum() {
+	capturando = document.getElementById('valor1').value;
+	document.getElementById('valorDigitado1').innerHTML = capturando;
+}
+var capturando = "";
+function capturardois() {
+	capturando = document.getElementById('valor2').value;
+	document.getElementById('valorDigitado2').innerHTML = capturando;
+}
+
+// ---------------------calendario---------------------------
+const date = new Date();
+
+const renderCalendar = () => {
+  date.setDate(1);
+
+  const monthDays = document.querySelector(".days");
+
+  const lastDay = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDate();
+
+  const prevLastDay = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    0
+  ).getDate();
+
+  const firstDayIndex = date.getDay();
+
+  const lastDayIndex = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDay();
+
+  const nextDays = 7 - lastDayIndex - 1;
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+
+  document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+  let days = "";
+
+  for (let x = firstDayIndex; x > 0; x--) {
+    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+  }
+
+  for (let i = 1; i <= lastDay; i++) {
+    if (
+      i === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth()
+    ) {
+      days += `<div class="today">${i}</div>`;
+    } else {
+      days += `<div>${i}</div>`;
+    }
+  }
+
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="next-date">${j}</div>`;
+    monthDays.innerHTML = days;
+  }
+};
+
+document.querySelector(".prev").addEventListener("click", () => {
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+});
+
+renderCalendar();
