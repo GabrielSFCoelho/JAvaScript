@@ -5,6 +5,7 @@ class Professor {
 		this.renderizarDisciplinas();
 		this.renderizarTurmas();
 		this.registrarEventos();
+		this.renderizarNomeProfessor();
 	}
 
 	getUsuarioLogado() {
@@ -12,18 +13,42 @@ class Professor {
 		return params.get('usuarioLogado');
 
 	}
+	// -------------------------------------------------------------------------------------
+	// preimeiro eu renderizo as coisas
+	renderizarNomeProfessor() {
+		$('#BProfLogado').html("Bem vindo "+this.getUsuarioLogado());
+	}
+
+	renderizarCorpoTabela(){
+		var alunos= JSON.parse(dadosArmazenados.getItem("pessoas")).alunos;
+		console.log(alunos)
+		$('#corpoTabela').html("")
+		$('#corpoTabela').append(
+			$.map(alunos, function(aluno){
+				return `<tr>
+					<td>${aluno.nome}</td>
+					<td>${$('#selectMaterias3').val()}</td>
+					<td>X</td>
+					<td><input type="checkbox"/></td>
+				</tr>`
+			})
+		)
+		
+	}
 
 	renderizarDisciplinas() {
 		var disciplinas = this.getDisciplinasDoProfessorLogado();
 		$.map(disciplinas, function (disciplina) {
-			$('#selectMaterias').append(`<option value="${disciplina}">${disciplina}</option>`);
+			$('#selectMaterias, #selectMaterias2,#selectMaterias3').append(`<option value="${disciplina}">${disciplina}</option>`);
 		});
 	}
 
 	getDisciplinasDoProfessorLogado() {
 		var pessoaLogada = this.getUsuarioLogado();
 		var pessoas = JSON.parse((dadosArmazenados.getItem('pessoas')));
-		var disciplinas = pessoas['professores'].filter(professor => professor.nome == pessoaLogada)[0].diciplinas;
+		var disciplinas = pessoas['professores'].filter(function (professor) {
+			return professor.nome == pessoaLogada
+		})[0].diciplinas;
 		return disciplinas;
 	}
 
@@ -86,14 +111,17 @@ class Professor {
 	obterNotas(aluno) {
 		return JSON.parse(dadosArmazenados.getItem('notas'))[aluno.nome + ' ' + aluno.sobrenome];
 	}
-
+	// segundo eu registro
 	registrarEventos() {
 		var that = this;
-		$('select').on('change', function () {
+		$('#selectMaterias').on('change', function () {
 			var disciplina = $('#selectMaterias').val();
 			var turma = $('#turmas').val();
 			var alunos = that.obterAlunosPorDisciplinaETurma(disciplina, turma);
 			that.renderizarListaDeAlunos(alunos);
+		})
+		$("#selectMaterias3").on('change', function(){
+			that.renderizarCorpoTabela()
 		})
 	}
 }
@@ -103,8 +131,6 @@ professor.renderizarListaDeAlunos(
 	professor.obterAlunosPorDisciplinaETurma(null, null)
 );
 
-
-document.getElementById('aqui').innerHTML = "Ola, " + 'usuarioLogado' + ", seja bem vindo!"
 
 
 
