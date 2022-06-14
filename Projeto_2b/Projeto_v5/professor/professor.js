@@ -39,7 +39,8 @@ class Professor {
 	renderizarDisciplinas() {
 		var disciplinas = this.getDisciplinasDoProfessorLogado();
 		$.map(disciplinas, function (disciplina) {
-			$('#selectMaterias, #selectMaterias2,#selectMaterias3').append(`<option value="${disciplina}">${disciplina}</option>`);
+			// coloca no select a materia do professor logado em todos os selcts
+			$('#selectMaterias, #selectMaterias2,#selectMaterias3,#selectMaterias4 ').append(`<option value="${disciplina}">${disciplina}</option>`);
 		});
 	}
 
