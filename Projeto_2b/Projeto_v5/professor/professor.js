@@ -6,6 +6,7 @@ class Professor {
 		this.renderizarTurmas();
 		this.registrarEventos();
 		this.renderizarNomeProfessor();
+		this.renderizarSubtituloProfessor();
 	}
 
 	getUsuarioLogado() {
@@ -15,8 +16,13 @@ class Professor {
 	}
 	// -------------------------------------------------------------------------------------
 	// preimeiro passo eu renderizo as coisas
+	//Boas vindas mais nome do professor
 	renderizarNomeProfessor() {
 		$('#BProfLogado').html("Bem vindo Professor(a) "+this.getUsuarioLogado());
+	}
+	//subititulo masi materias que leciona
+	renderizarSubtituloProfessor(){
+		$('#subtitulo').html("Responsavel pelas disciplinas: "+this.getDisciplinasDoProfessorLogado());
 	}
 
 	renderizarCorpoTabela(){
