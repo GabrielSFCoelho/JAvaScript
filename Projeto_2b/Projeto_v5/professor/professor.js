@@ -16,7 +16,7 @@ class Professor {
 	// -------------------------------------------------------------------------------------
 	// preimeiro passo eu renderizo as coisas
 	renderizarNomeProfessor() {
-		$('#BProfLogado').html("Bem vindo "+this.getUsuarioLogado());
+		$('#BProfLogado').html("Bem vindo Professor(a) "+this.getUsuarioLogado());
 	}
 
 	renderizarCorpoTabela(){
@@ -131,6 +131,7 @@ class Professor {
 		})
 		$("#selectMaterias3").on('change', function(){
 			that.renderizarCorpoTabela()
+			
 		})
 		$("#turmas3").on('change', function(){
 			
