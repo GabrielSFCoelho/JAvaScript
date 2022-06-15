@@ -14,21 +14,28 @@ class Professor {
 
 	}
 	// -------------------------------------------------------------------------------------
-	// preimeiro eu renderizo as coisas
+	// preimeiro passo eu renderizo as coisas
 	renderizarNomeProfessor() {
 		$('#BProfLogado').html("Bem vindo "+this.getUsuarioLogado());
 	}
 
 	renderizarCorpoTabela(){
+		// recebe uma string JSON e a transforma em um objeto JavaScript
+		// pegando do dados armazenados o json"pessoas" e vendo os alunos dentro do pessoas
 		var alunos= JSON.parse(dadosArmazenados.getItem("pessoas")).alunos;
 		console.log(alunos)
+		// aqui limpa o html da tabela
 		$('#corpoTabela').html("")
+		// o append coloca no minha tabela o html
 		$('#corpoTabela').append(
+			// map le apenas os alunos do meu json pessoas
+			// "$" é do jquery
 			$.map(alunos, function(aluno){
+				// aluno.nome pega do json o nome dos alunos que esta no arquivo pessoas
 				return `<tr>
 					<td>${aluno.nome}</td>
 					<td>${$('#selectMaterias3').val()}</td>
-					<td>X</td>
+					<td>X Horas</td>
 					<td><input type="checkbox"/></td>
 				</tr>`
 			})
@@ -39,7 +46,7 @@ class Professor {
 	renderizarDisciplinas() {
 		var disciplinas = this.getDisciplinasDoProfessorLogado();
 		$.map(disciplinas, function (disciplina) {
-			// coloca no select a materia do professor logado em todos os selcts
+			// coloca no select a materia do professor logado em todos os selects
 			$('#selectMaterias, #selectMaterias2,#selectMaterias3,#selectMaterias4 ').append(`<option value="${disciplina}">${disciplina}</option>`);
 		});
 	}
@@ -56,7 +63,8 @@ class Professor {
 	renderizarTurmas() {
 		var turmas = JSON.parse(localStorage.getItem('turma'))['Turmas'];
 		$.map(Object.keys(turmas), function (turma) {
-			$('#turmas').append(`<option value="${turma}">${turma}</option>`);
+			// coloca no select a a turma do professor logado em todos os selects
+			$('#turmas, #turmas2, #turmas3, #turmas4').append(`<option value="${turma}">${turma}</option>`);
 		});
 	}
 
@@ -112,7 +120,7 @@ class Professor {
 	obterNotas(aluno) {
 		return JSON.parse(dadosArmazenados.getItem('notas'))[aluno.nome + ' ' + aluno.sobrenome];
 	}
-	// segundo eu registro
+	// segundo passo eu registro
 	registrarEventos() {
 		var that = this;
 		$('#selectMaterias').on('change', function () {
@@ -122,6 +130,10 @@ class Professor {
 			that.renderizarListaDeAlunos(alunos);
 		})
 		$("#selectMaterias3").on('change', function(){
+			that.renderizarCorpoTabela()
+		})
+		$("#turmas3").on('change', function(){
+			
 			that.renderizarCorpoTabela()
 		})
 	}
