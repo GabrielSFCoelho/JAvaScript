@@ -6,8 +6,8 @@ function Login() {
 		'Emanuel': "professor/professor.html?usuarioLogado=Emanuel",
 		'aluno': "aluno/aluno.html?usuarioLogado=aluno",
 		'responsavel': "responsavel/responsavel.html?usuarioLogado=responsavel",
-		'secretaria': "secretaria/secretaria.html?usuarioLogado=secretaria",
-		'financas': "financas/financas.html?usuarioLogado=financas"
+		'Judite': "secretaria/secretaria.html?usuarioLogado=Judite",
+		'Roberto': "financas/financas.html?usuarioLogado=Roberto"
 	};
 
     if (!document.login_form.txtUsuario.value) {
