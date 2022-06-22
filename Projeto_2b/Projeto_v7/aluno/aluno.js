@@ -9,6 +9,7 @@ class Aluno {
         this.renderizarMateria03();
         this.renderizarMateria04();
         this.renderizarMateria05();
+       
 	}
 
 	getUsuarioLogado() {
@@ -44,10 +45,11 @@ class Aluno {
     }
 
     renderizarMateria05(){
-        $('#Materia05, #matGrade05').html(JSON.parse(localStorage.getItem('pessoas')).alunos[4].diciplina[4]);
+        $('#Materia05, #matGrade05').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].DiciplinaEx[0]);
     }
-
-        
+    
+    
+    
 
 }
 aluno = new Aluno();

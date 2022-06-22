@@ -17,6 +17,7 @@ class Financeiro {
 		this.renderizarAluno4();
 		this.renderizarsobreNome4();
 		this.renderizarMaterias4();
+		// this.renderizarResponsavel();
 	}
 
 	getUsuarioLogado() {
@@ -95,6 +96,13 @@ class Financeiro {
 		});
 	}
 
+	// renderizarResponsavel() {
+	// 	var turmas = JSON.parse(localStorage.getItem('Pessoas')).responsaveis.nome;
+	// 	$.map(Object.keys(responsaveis), function (responsavel) {
+	// 		// coloca no select a a turma do professor logado em todos os selects
+	// 		$('#resp').append(`<option value="${responsavel}">${responsavel}</option>`);
+	// 	});
+	// }
 
 
 	registrarEventos() {
@@ -108,9 +116,3 @@ class Financeiro {
 
 }
 financeiro = new Financeiro();
-
-
-
-// test() {
-	// 	$('#').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina.join("<br>"));
-	// }
