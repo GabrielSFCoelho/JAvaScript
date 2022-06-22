@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_img.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+  <title>Aluno</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <div>
+            <h5 class="text-white h4" id="PessoaLogadatitulo"></h5>
+            <span class="text-muted">Você está na area de alunos. Abaixo terá todas as informações que necessita.</span>
+          </div>
+          <div class="text-right">
+            <a href="../index.html"><img src="../img/Logout.png" class="hvr-pop"></a>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <img src="../img/banner2.jpg" class="mb-1 h-25 w-auto">
+    <div class="container">
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+          aria-expanded="false" aria-controls="collapseExample">
+          Chat
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <nav>
+            <div class="nav nav-tabs mb-2" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                aria-controls="nav-home" aria-selected="true">Professor 1</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Professor 2</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                aria-controls="nav-contact" aria-selected="false">Professor 3</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="text-left ">
+                <h6>Aluno: </h6> Boa tarde professor.
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Boa tarde, tudo bem?
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6>Tudo ótimo...Hoje teremos aula?
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Hoje não, apenas amanhã.
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6> Coisa boa! Nos vemos amanhã então prof!
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <div class="text-left ">
+                <h6>Aluno: </h6> Ola professor, tudo bem?
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Boa tarde, tudo bem sim e você?
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6>Tudo certo tambem! Sabe me dizer quando vai sair a nota de Geografia?
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Amanhã de manhã ja irei postar no portal! 
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6> Entendi... obrigado professor, tenha um ótimo dia!
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+              <div class="text-left ">
+                <h6>Aluno: </h6> Olá Professora.
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Boa tarde, tudo bem?
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6> Quando vai ser postada a nota de Matemática?
+              </div>
+              <div class="text-right">
+                <h6>Professor:</h6>Vou corrigir as provas neste final de semana! Segunda-feira ja irei lançar no portal!
+              </div>
+              <div class="text-left">
+                <h6>Aluno:</h6> Obrigado prof!
+              </div>
+            </div>
+
+          </div>
+
+          <!-- caixa de texto e botao -->
+          <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="Mensagem" aria-label="Mensagem"
+              aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- accordion -->
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Notas/Faltas
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <!-- conteudo "notas" aqui -->
+              <div class="card-body">
+                <!-- conteudo "notas/faltas" aqui -->
+
+                <div class="row">
+
+                  <!-- tabela com alunos -->
+                  <table class="table table-hover table-ativo">
+                    <!-- cabeçalho -->
+                    <thead>
+                      <tr>
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Faltas</th>
+                        <th scope="col">A1</th>
+                        <th scope="col">A2</th>
+                        <th scope="col">Media</th>
+                      </tr>
+                    </thead>
+
+                    <!-- linhas da tabela -->
+
+                    <tbody>
+                      <tr>
+                        <td id="nomeAluno"></td>
+                        <td>8/25</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>9</td>
+                      </tr>
+                    </tbody>
+                    <!-- termina linhas da tabela -->
+                  </table>
+
+
+                  <!-- termina conteudo  notas/faltas-->
+                </div>
+              </div>
+
+
+              <!-- termina conteudo notas -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Matérias
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <!-- conteudo "Materias" aqui -->
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <!-- conteudo "materias" aqui -->
+
+                  <div class="text-center">
+                    <div>
+                    <h7 class="d-inline p-2" id="Materia1"></h7>|150h
+                    </div>
+                    <hr>
+                    <h7 class="d-inline p-2" id="Materia02"></h7>|150h
+                    <hr>
+                    <h7 class="d-inline p-2" id="Materia03"></h7>|150h
+                    <hr>
+                    <h7 class="d-inline p-2" id="Materia04"></h7>|150h
+                    <hr>
+                    <h7 class="d-inline p-2" id="Materia05">Basquete</h7>|75h
+                  </div>
+
+                  <!-- termina conteudo materias -->
+                </div>
+              </div>
+
+
+              <!-- termina conteudo materias -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Grade Horária
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <!-- conteudo "Grade Horaria" aqui -->
+
+              <div class="card-body">
+                <!-- conteudo "grade horaria do filho" aqui -->
+
+                <div class="row">
+
+                  <!-- tabela com alunos -->
+                  <table class="table table-hover table-ativo">
+                    <!-- cabeçalho -->
+                    <thead>
+                      <tr>
+                        <th scope="col">Segunda-feira</th>
+                        <th scope="col">Terça-feira</th>
+                        <th scope="col">Quarta-feira</th>
+                        <th scope="col">Quinta-feira</th>
+                        <th scope="col">Sexta-feira</th>
+                      </tr>
+                    </thead>
+
+                    <!-- linhas da tabela -->
+
+                    <tbody>
+                      <tr>
+                        <td id="matGrade01"></td>
+                        <td id="matGrade02"></td>
+                        <td id="matGrade03"></td>
+                        <td id="matGrade04"></td>
+                        <td id="matGrade05">Basquete</td>
+                      </tr>
+                    </tbody>
+                    <!-- termina linhas da tabela -->
+                  </table>
+
+
+
+                </div>
+              </div>
+
+
+
+              <!-- termina conteudo grade horaria -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFor">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFor"
+                aria-expanded="false" aria-controls="collapsefor">
+                Material de estudo
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFor" class="collapse" aria-labelledby="headingFor" data-parent="#accordionExample2">
+            <div class="card-body">
+              <!-- conteudo "Materias" aqui -->
+              <div class="accordion" id="accordionExample2">
+                <div class="card">
+                  <div class="card-header" id="heading1">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1">
+                        Lingua Portuguesa
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample2">
+                    <div class="card-body bg-light">
+                      <!-- conteudo lp -->
+                      <div class="text-center">
+                      <h2>Aula 01 </h2>
+                      <p>Aula sobre interpretação de texto e tempos verbais. Visto dia 03/05</p>
+                      <a class="btn btn-dark m-2" href="../img/faustao.jpg" role="button" download="LivroBloodHunter"target="_blank"> Baixar PDF da aula</a>
+                      <hr>
+                      </div>
+                      <!-- fim conteudo lp -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading2">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Matemática
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample2">
+                    <div class="card-body">
+                      <!-- conteudo mat -->
+                      <div class="text-center">
+                        <h2>Aula 04 </h2>
+                        <p>Aula sobre polinômios e equações do 2º grau. Visto dia 14/06</p>
+                        <a class="btn btn-dark m-2" href="../img/faustao.jpg" role="button" download="LivroBloodHunter"target="_blank"> Baixar PDF da aula</a>
+                        <hr>
+                        </div>
+
+                      <!-- fim conteudo mat -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading3">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        História
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample2">
+                    <div class="card-body">
+                      <!-- conteudo hist -->
+                      <div class="text-center">
+                        <h2>Aula 02 </h2>
+                        <p>Aula sobre Idade Média e Idade Moderna. Visto dia 25/07</p>
+                        <a class="btn btn-dark m-2" href="../img/faustao.jpg" role="button" download="LivroBloodHunter"target="_blank"> Baixar PDF da aula</a>
+                        <hr>
+                        </div>
+
+                      <!-- fim conteudo hist -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="heading4">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Geografia
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample2">
+                    <div class="card-body">
+                      <!-- conteudo geo -->
+                      <div class="text-center">
+                        <h2>Aula 06 </h2>
+                        <p>Aula sobre planices e planaltos. Visto dia 30/05</p>
+                        <a class="btn btn-dark m-2" href="../img/faustao.jpg" role="button" download="LivroBloodHunter"target="_blank"> Baixar PDF da aula</a>
+                        <hr>
+                        </div>
+
+                      <!-- fim conteudo geo -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- termina conteudo materias -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+                Calendário
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              <!-- conteudo "calendario" aqui -->
+              <div class="caixaContainer">
+
+                <div class="calendar">
+
+                  <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">
+                      <h1></h1>
+                      <p></p>
+                    </div>
+                    <i class="fas fa-angle-right next"></i>
+                  </div>
+
+                  <div class="weekdays">
+                    <div>Dom</div>
+                    <div>Seg</div>
+                    <div>Ter</div>
+                    <div>Qua</div>
+                    <div>Qui</div>
+                    <div>Sex</div>
+                    <div>Sab</div>
+                  </div>
+
+                  <div class="days"></div>
+
+                </div>
+              </div>
+
+              <!-- termina conteudo calendario -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- accordion -->
+    </div>
+  </section>
+
+  <footer>
+
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../requestJSON.js"></script>
+  <script src="aluno.js"></script>
+
+</body>
+
+</html>
