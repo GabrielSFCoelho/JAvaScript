@@ -17,7 +17,7 @@ class Financeiro {
 		this.renderizarAluno4();
 		this.renderizarsobreNome4();
 		this.renderizarMaterias4();
-		// this.renderizarResponsavel();
+		this.renderizarResponsavel();
 	}
 
 	getUsuarioLogado() {
@@ -79,6 +79,7 @@ class Financeiro {
 	}
 	
 	// -------------------------------------------------------------------------------------------------------
+	
 	renderizarTurmas() {
 		var turmas = JSON.parse(localStorage.getItem('turma'))['Turmas'];
 		jQuery.map(Object.keys(turmas), function (turma) {
@@ -89,20 +90,21 @@ class Financeiro {
 
 
 	renderizarDisciplinas() {
-		var disciplinas = JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina
+		var disciplinas = JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina;
 		$.map((disciplinas), function (disciplina) {
 
 			$('#disciplinas').append(`<option value="${disciplina}">${disciplina}</option>`);
 		});
 	}
 
-	// renderizarResponsavel() {
-	// 	var turmas = JSON.parse(localStorage.getItem('Pessoas')).responsaveis.nome;
-	// 	$.map(Object.keys(responsaveis), function (responsavel) {
-	// 		// coloca no select a a turma do professor logado em todos os selects
-	// 		$('#resp').append(`<option value="${responsavel}">${responsavel}</option>`);
-	// 	});
-	// }
+	renderizarResponsavel() {
+		var responsaveis = JSON.parse(localStorage.getItem('pessoas')).responsaveis[0].nome;
+		
+		$.map(Object.keys(responsaveis), function (responsavel) {
+			// coloca no select a a turma do professor logado em todos os selects
+			$('#resp').append(`<option value="${responsavel}">${responsavel}</option>`);
+		});
+	}
 
 
 	registrarEventos() {
@@ -110,6 +112,7 @@ class Financeiro {
 		$('#disciplinas').on('change', function () {
 			var disciplinas = $('#disciplinas').val();
 			var turma = $('#turmas').val();
+			var responsavel =$('#resp').val();
 		})
 
 	}

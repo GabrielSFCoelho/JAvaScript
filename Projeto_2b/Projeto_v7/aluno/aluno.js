@@ -9,7 +9,8 @@ class Aluno {
         this.renderizarMateria03();
         this.renderizarMateria04();
         this.renderizarMateria05();
-       
+        this.renderizarnFaltas();
+        this.renderizarPrimeiraNota();
 	}
 
 	getUsuarioLogado() {
@@ -48,8 +49,12 @@ class Aluno {
         $('#Materia05, #matGrade05').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].DiciplinaEx[0]);
     }
     
-    
-    
+    renderizarnFaltas() {
+		$('#nfaltas').html(JSON.parse(localStorage.getItem('Faltas')).NotasAluno[0].disciplina[0][0]);
+	}
+    renderizarPrimeiraNota(){
+        $('a1').html(JSON.parse(localStorage.getItem('notas')).GabrielCoelho.A1);
+    }
 
 }
 aluno = new Aluno();
