@@ -26,17 +26,7 @@ class Responsavel
 		$('#tituloLogado').html("Bem vindo(a)" + this.getUsuarioLogado());
 	}
 
-	// ---info1----------------------------------------------------------------------------------------------
-
-	// renderizarNomeAluno() 
-    // {
-	// 	$('#nomeAluno').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].nome);
-	// }
-
-	// renderizarMaterias1() 
-    // {
-	// 	$('#Materia1').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina.join(", "));
-	// }
+	// ---info----------------------------------------------------------------------------------------------
 
     renderizarNomedoFilho()
     {

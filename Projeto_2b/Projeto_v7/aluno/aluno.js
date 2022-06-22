@@ -21,17 +21,12 @@ class Aluno {
 		$('#PessoaLogadatitulo').html("Bem vindo(a)  " + this.getUsuarioLogado());
 	}
 
-	// ---info1----------------------------------------------------------------------------------------------
+	// ---info----------------------------------------------------------------------------------------------
 
 	renderizarNomeAluno() {
 		$('#nomeAluno').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].nome);
 	}
-	// renderizarsobreNome1() {
-	// 	$('#SobreNome1').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].sobrenome);
-	// }
-	// renderizarMaterias1() {
-	// 	$('#Materia1').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina.join(", "));
-	// }
+	
     renderizarMateria1(){
         $('#Materia1, #matGrade01').html(JSON.parse(localStorage.getItem('pessoas')).alunos[0].diciplina[0]);
     }
